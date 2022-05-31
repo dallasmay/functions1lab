@@ -192,7 +192,19 @@ function nameCheck(name) {
 */
 
 //CODE HERE
-
+function faveColorFinder(color) {
+  if (color === "red") {
+    return "Red is a great color";
+  } else if (color === "green") {
+    return "Green is a solid favorite color";
+  } else if (color === "black") {
+    return "So trendy";
+  } else {
+    return "You need to evaluate your favorite color choice";
+  }
+}
+let colorRating = faveColorFinder("black");
+// console.log(colorRating);
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -203,7 +215,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+function printAllNames (arr) {
+  for (i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+  }
+}
+// printAllNames(namesArr);
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -214,7 +231,15 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+const thatsOdd = (num) => {
+  if (num % 2 === 0) {
+    return "That's not odd!"
+  } else {
+    return "That is odd indeed!"
+  }
+}
+let oddChecker = thatsOdd(8);
+// console.log(oddChecker);
 
 ////////////////// PROBLEM 14 ////////////////////
 
@@ -227,7 +252,8 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+const bestMovie = (movieParam) => `${movieParam} is the best movie ever!`;
+// console.log(bestMovie("Tron"));
 
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -241,7 +267,19 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
-
+function bigOrSmall (arr) {
+  let answers = [];
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      answers.push("big");
+    } else if (arr[i] <= 100) {
+      answers.push("small");
+    }
+  }
+  return answers;
+}
+let arrayEvaluator = bigOrSmall(bigOrSmallArray);
+// console.log(arrayEvaluator);
 
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
