@@ -290,7 +290,15 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
-
+function theEliminator(contestants, loser) {
+  for (i = 0; i < contestants.length; i++) {
+    if (contestants[i] === loser) {
+      contestants.splice(i, 1);
+    }
+  }
+  return contestants;
+}
+console.log(theEliminator(contestants, loser));
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -300,7 +308,9 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+const upperCase = (str) => console.log(str.toUpperCase());
 
+upperCase(sampleString);
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -313,6 +323,20 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+function emailCheck(email) {
+  let stringEmail = String(email);
+  stringEmail = stringEmail.trim();
+  if (stringEmail.includes(" ")) {
+    return "Email contains spaces";
+  } else if (stringEmail.includes("@")) {
+    return "Email verified";
+  } else {
+    return "Must provide a valid email address";
+  }
+}
+let emailInput = "hellothere@devmountain.com";
+console.log(emailCheck(emailInput));
+
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -320,7 +344,17 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
+function chocFrog(gold) {
+  let totalFrog = 0;
+  let balance = gold;
+  while (balance >= 3) {
+    totalFrog++;
+    balance -= 3;
+  }
+  return totalFrog;
+}
+let newTotalFrogs = chocFrog(60);
+// console.log(newTotalFrogs);
 
 ////////////////// PROBLEM 20 ////////////////////
 /*
@@ -329,6 +363,7 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
+//I did not have a bug in my function!!!
 
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
